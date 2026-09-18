@@ -1,0 +1,270 @@
+/* Honey Bears Bakery - CSS - Colour Scheme: Warm Pink, Soft Cream, Warm Brown*/
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+/* COLOUR PALETTE matches colour design in my proposal */
+:root {
+    --warm-pink: #e8a8b5;
+    --warm-pink-dark: #c97b8c;
+    --warm-brown: #8b5a2b;
+    --warm-brown-light: #a67c52;
+    --soft-cream: #fff9f0;
+    --soft-cream-dark: #f7ead8;
+    --text-dark: #5a3e2b;
+    --text-light: #7a5c45;
+    --white: #ffffff;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--soft-cream);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Typography*/
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--warm-brown);
+}
+
+h1 { font-size: 2.25rem; letter-spacing: -0.02em; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.25rem; }
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.7;
+    color: var(--text-light);
+}
+
+a {
+    text-decoration: none;
+    color: var(--warm-brown);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--warm-pink-dark);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5rem;
+}
+
+/*Header & Navigation*/
+header {
+    background-color: var(--soft-cream-dark);
+    padding: 1.5rem 5%;
+    border-bottom: 3px solid var(--warm-pink);
+}
+
+header img {
+    max-height: 90px;
+    margin-bottom: 0.5rem;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--warm-brown);
+}
+
+nav ul {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-weight: 600;
+    color: var(--warm-brown);
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--warm-pink);
+    color: var(--white);
+}
+
+/*Main Content*/
+main {
+    flex: 1;
+    max-width: 70rem;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+main h2 {
+    color: var(--warm-brown);
+    border-bottom: 2px solid var(--warm-pink);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+main img {
+    margin: 1rem 0;
+    box-shadow: 0 4px 10px rgba(139, 90, 43, 0.15);
+}
+
+main ul {
+    margin: 1rem 0 1.5rem 1.25rem;
+}
+
+main li {
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+
+/*Form Styling (Enquiries Page)*/
+form {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    border: 2px solid var(--warm-pink);
+    max-width: 32rem;
+    margin-top: 1rem;
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    color: var(--warm-brown);
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--warm-pink);
+    border-radius: 0.375rem;
+    background-color: var(--soft-cream);
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: var(--warm-brown);
+    box-shadow: 0 0 0 2px rgba(232, 168, 181, 0.3);
+}
+
+form button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+    background-color: var(--warm-brown);
+    color: var(--white);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--warm-pink-dark);
+    transform: translateY(-2px);
+}
+
+/*Footer*/
+footer {
+    background-color: var(--warm-brown);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+footer p {
+    color: var(--soft-cream);
+}
+
+/* RESPONSIVE DESIGN */
+
+/* TABLET — 768px to 1023px */
+@media screen and (max-width: 1023px) {
+    h1 { font-size: 1.9rem; }
+    h2 { font-size: 1.4rem; }
+
+    header {
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    main {
+        width: 92%;
+        padding: 1.5rem 0;
+    }
+
+    form {
+        padding: 1.5rem;
+    }
+}
+
+/* MOBILE — Under 768px */
+@media screen and (max-width: 767px) {
+    html {
+        font-size: 95%;
+    }
+
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.2rem; }
+
+    header {
+        padding: 1rem 3%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    nav a {
+        display: block;
+        padding: 0.6rem;
+    }
+
+    main {
+        width: 94%;
+        padding: 1rem 0;
+    }
+
+    form {
+        padding: 1rem;
+    }
+}
